@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="18">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>10</ID>
+      <Description>"Values"</Description>
+      <Options moHideChildren="1"/>
+      <LastState Value="" Activated="0" RealAddress="00000000"/>
+      <Color>80000008</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>4</ID>
+          <Description>"health"</Description>
+          <LastState Value="999" Activated="1" RealAddress="1F52FDE0"/>
+          <Color>80000008</Color>
+          <VariableType>2 Bytes</VariableType>
+          <Address>1F52FDE0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>3</ID>
+          <Description>"mana"</Description>
+          <LastState Value="100" Activated="0" RealAddress="1F52FEDC"/>
+          <Color>80000008</Color>
+          <VariableType>2 Bytes</VariableType>
+          <Address>1F52FEDC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1</ID>
+          <Description>"money"</Description>
+          <LastState Value="72067" Activated="0" RealAddress="265B48F8"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>265B48F8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>0</ID>
+          <Description>"pistol ammo"</Description>
+          <LastState Value="17" Activated="0" RealAddress="265B151C"/>
+          <Color>80000008</Color>
+          <VariableType>Byte</VariableType>
+          <Address>265B151C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2</ID>
+          <Description>"bear skins"</Description>
+          <LastState Value="99998" Activated="0" RealAddress="265B49C0"/>
+          <Color>80000008</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>265B49C0</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"Scripts"</Description>
+      <Options moHideChildren="1"/>
+      <LastState Value="" Activated="1" RealAddress="00000000"/>
+      <Color>80000008</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>15</ID>
+          <Description>"Moon Jump"</Description>
+          <LastState Activated="1"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[enable]
+GameLogic.dll+0004FFA0:
+fld dword ptr [ecx+00000124]
+fldpi
+fmulp
+ret
+
+[disable]
+GameLogic.dll+0004FFA0:
+fld dword ptr [ecx+00000124]
+ret
+int 3
+int 3
+int 3
+int 3
+
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>16</ID>
+              <Description>"Moon Jump (Extra)"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[enable]
+GameLogic.dll+0004FFA0:
+fld dword ptr [ecx+00000124]
+fldpi
+fldpi
+fmulp
+fmulp
+ret
+
+[disable]
+GameLogic.dll+0004FFA0:
+fld dword ptr [ecx+00000124]
+ret
+int 3
+int 3
+int 3
+int 3
+int 3
+int 3
+int 3
+int 3
+
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>5</ID>
+          <Description>"Super Speed"</Description>
+          <LastState Activated="1"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[enable]
+GameLogic.dll+00013940:
+fld dword ptr [GameLogic.dll+00078B34]
+fldpi
+fldpi
+fmulp
+fmulp
+ret
+
+[disable]
+GameLogic.dll+00013940:
+fld dword ptr [GameLogic.dll+00078B34]
+ret
+int 3
+int 3
+int 3
+int 3
+int 3
+int 3
+int 3
+int 3
+
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>12</ID>
+              <Description>"Super Speed (Extra)"</Description>
+              <LastState Activated="0"/>
+              <Color>80000008</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[enable]
+GameLogic.dll+00013940:
+fld dword ptr [GameLogic.dll+00078B34]
+fldpi
+fldpi
+fmulp
+fmulp
+ret
+
+[disable]
+GameLogic.dll+00013940:
+fld dword ptr [GameLogic.dll+00078B34]
+ret
+int 3
+int 3
+int 3
+int 3
+int 3
+int 3
+int 3
+int 3
+
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>6</ID>
+          <Description>"Unlimited Ammo"</Description>
+          <LastState Activated="1"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[enable]
+GameLogic.dll+00052396:
+nop
+nop
+nop
+
+[disable]
+GameLogic.dll+00052396:
+mov [eax+1C],ecx
+
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>13</ID>
+          <Description>"Massive Gun Damage"</Description>
+          <LastState Activated="1"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[enable]
+GameLogic.dll+00013930: // Pistol Damage
+mov eax,01000000
+
+GameLogic.dll+000139F0: // AK Damage
+mov eax,01000000
+
+GameLogic.dll+00013AA0: // Cowboy Coder Damage
+mov eax,01000000
+
+GameLogic.dll+00013C00: // Remote Exploit Damage
+mov eax,01000000
+
+[disable]
+GameLogic.dll+00013930: // Pistol Damage
+mov eax,0000000E
+
+GameLogic.dll+000139F0: // AK Damage
+mov eax,0000000B
+
+GameLogic.dll+00013AA0: // Cowboy Coder Damage
+mov eax,0000003C
+
+GameLogic.dll+00013C00: // Remote Exploit Damage
+mov eax,00000096
+
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <LuaScript>
+</LuaScript>
+  <DisassemblerComments>
+    <DisassemblerComment>
+      <Address>"GameLogic.dll"+52396</Address>
+      <Comment>modifies pistol ammo count
+</Comment>
+    </DisassemblerComment>
+  </DisassemblerComments>
+</CheatTable>

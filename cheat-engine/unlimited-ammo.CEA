@@ -1,0 +1,9 @@
+[enable]
+GameLogic.dll+00052396:
+nop
+nop
+nop
+
+[disable]
+GameLogic.dll+00052396:
+mov [eax+1C],ecx

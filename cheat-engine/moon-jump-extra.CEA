@@ -1,0 +1,21 @@
+[enable]
+GameLogic.dll+0004FFA0:
+fld dword ptr [ecx+00000124]
+fldpi
+fldpi
+fmulp
+fmulp
+ret
+
+[disable]
+GameLogic.dll+0004FFA0:
+fld dword ptr [ecx+00000124]
+ret
+int 3
+int 3
+int 3
+int 3
+int 3
+int 3
+int 3
+int 3
