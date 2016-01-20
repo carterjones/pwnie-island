@@ -80,7 +80,6 @@ int 3
 int 3
 int 3
 int 3
-
 </AssemblerScript>
           <CheatEntries>
             <CheatEntry>
@@ -110,7 +109,6 @@ int 3
 int 3
 int 3
 int 3
-
 </AssemblerScript>
             </CheatEntry>
           </CheatEntries>
@@ -142,7 +140,6 @@ int 3
 int 3
 int 3
 int 3
-
 </AssemblerScript>
           <CheatEntries>
             <CheatEntry>
@@ -172,7 +169,6 @@ int 3
 int 3
 int 3
 int 3
-
 </AssemblerScript>
             </CheatEntry>
           </CheatEntries>
@@ -192,7 +188,6 @@ nop
 [disable]
 GameLogic.dll+00052396:
 mov [eax+1C],ecx
-
 </AssemblerScript>
         </CheatEntry>
         <CheatEntry>
@@ -226,7 +221,6 @@ mov eax,0000003C
 
 GameLogic.dll+00013C00: // Remote Exploit Damage
 mov eax,00000096
-
 </AssemblerScript>
         </CheatEntry>
       </CheatEntries>
