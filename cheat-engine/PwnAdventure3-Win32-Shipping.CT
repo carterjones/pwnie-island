@@ -141,6 +141,26 @@ mov [eax+1C],ecx
 </AssemblerScript>
         </CheatEntry>
         <CheatEntry>
+          <ID>21</ID>
+          <Description>"Unlimited Mana"</Description>
+          <LastState Activated="1"/>
+          <Color>80000008</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[enable]
+GameLogic.dll+000525C7:
+nop
+nop
+nop
+nop
+nop
+nop
+
+[disable]
+GameLogic.dll+000525C7:
+mov [esi+000000BC],eax
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
           <ID>13</ID>
           <Description>"Massive Gun Damage"</Description>
           <LastState Activated="1"/>

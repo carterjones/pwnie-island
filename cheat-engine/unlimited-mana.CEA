@@ -1,0 +1,12 @@
+[enable]
+GameLogic.dll+000525C7:
+nop
+nop
+nop
+nop
+nop
+nop
+
+[disable]
+GameLogic.dll+000525C7:
+mov [esi+000000BC],eax
